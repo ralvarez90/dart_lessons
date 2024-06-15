@@ -8,6 +8,15 @@ void main(List<String> arguments) {
   // Ls02. Invocando funciones.
   ls02Functions();
 
+  // Ls03. Parámetros posicionales
+  ls03Parametros();
+
+  // Parámetros opcionales
+  ls04ParametrosOpcionales();
+
+  // Named parameters
+  ls05NamedParameters();
+
   // end application
   systemPause();
 }
