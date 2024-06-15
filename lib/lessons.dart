@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:math';
 
 import 'package:dart_lessons/tools.dart';
 /**
@@ -203,4 +204,20 @@ void ls09Closures() {
 
   someClosure('Rodrigo');
   someClosure();
+}
+
+/// LISTAS
+///
+/// Declaramos las listas empleando List<T> o corchetes
+/// <T>[item1, item2, etc.]
+void ls10Listas() {
+  print('LS10. List');
+
+  // creación de lista usando List
+  final List<num> someNumbers = <num>[1, 2, 3.0, 3.4];
+  for (int i = 1; i <= 1000000; i++) {
+    someNumbers.insert(0, Random().nextInt(20));
+  }
+
+  printSeparator();
 }
