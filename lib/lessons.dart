@@ -4,7 +4,10 @@
  * Contiene todas las lecciones del curso sepradors por funciones.
  */
 
-/// Muestra mensajes por consola usando print.
+/// PRINT
+///
+/// Se emplea al función print para imprimir mensajes en la salida
+/// standard.
 void ls01HelloWorld() {
   print('Hello World in Dart!');
 }

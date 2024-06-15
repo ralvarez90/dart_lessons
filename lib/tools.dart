@@ -20,10 +20,40 @@ void systemPause() {
 
 /// Prints a sinle line separator.
 void printSeparator([int length = 50]) {
+  print('');
   print('-' * length);
 }
 
 /// Lanza una excepción ordinaria.
-void throwException(String errorMsg) {
-  throwException(errorMsg);
+void throwNewException(String errorMsg) {
+  throw Exception(errorMsg);
+}
+
+/// Retorna string en reversa.
+String reverseString(String str) {
+  return String.fromCharCodes(str.codeUnits.reversed);
+}
+
+/// Obtiene substrings a partir de otro
+/// string.
+String getSubString(String str, int index) {
+  if (index < 0) {
+    throwNewException('Invalid index, cannot be < 0');
+  }
+
+  String sub = '';
+  for (int i = 0; i < index; i++) {
+    sub += str[i];
+  }
+  return sub;
+}
+
+/// Obtiene un title version del string que recibe
+/// como argumento.
+String title(String str) {
+  if (str.isEmpty) {
+    return '';
+  }
+
+  return str[0].toUpperCase() + str.substring(1);
 }
