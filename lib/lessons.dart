@@ -1,12 +1,11 @@
-import 'dart:io';
-import 'dart:math';
-
-import 'package:dart_lessons/tools.dart';
 /**
  * LESSONS FUNCTIONS
  * 
  * Contiene todas las lecciones del curso sepradors por funciones.
  */
+import 'dart:io';
+import 'dart:math';
+import 'tools.dart';
 
 /// PRINT
 ///
@@ -209,15 +208,52 @@ void ls09Closures() {
 /// LISTAS
 ///
 /// Declaramos las listas empleando List<T> o corchetes
-/// <T>[item1, item2, etc.]
+/// <T>[item1, item2, etc.] Donde las listas pueden almacenar
+/// cualquier tipo de dato.
+///
+/// Si el tipo de dato almacenar en una lista no se especifica
+/// se toma el tipo dynamic por default.
 void ls10Listas() {
   print('LS10. List');
 
   // creación de lista usando List
   final List<num> someNumbers = <num>[1, 2, 3.0, 3.4];
-  for (int i = 1; i <= 1000000; i++) {
+  for (int i = 1; i <= 10000; i++) {
     someNumbers.insert(0, Random().nextInt(20));
   }
 
+  // otra lista
+  final otherLst = [
+    'Hello',
+    'World',
+    'Dart',
+  ];
+
+  // iteracion foreach
+  otherLst.forEach((x) {
+    print('Word: $x');
+    ;
+  });
+
   printSeparator();
+}
+
+/// COMPARACIONES ENTRE LISTAS
+///
+/// Las listas son objetos por lo que si los comparamos empleando
+/// el operador == estaremos comparando referencias y no valores
+/// concretos.
+///
+///
+void ls11ComparacionesListas() {
+  print('LS11. Comparaciones entre listas');
+
+  // compara referencias
+  List<int> listaA = [1, 2, 3];
+  List<int> listaB = [4, 5, 6];
+  print('listaA == listaB ?? ${listaA == listaB}');
+
+  // creamos nueva instancias
+  List<int> listaC = listaB;
+  print(' DlistaC == listaB ?? ${listaB == listaC}');
 }

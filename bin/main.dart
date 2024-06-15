@@ -1,5 +1,5 @@
-import 'package:dart_lessons/lessons.dart';
-import 'package:dart_lessons/tools.dart';
+import '../lib/lessons.dart';
+import '../lib/tools.dart';
 
 void main(List<String> arguments) {
   // Show message with print function
