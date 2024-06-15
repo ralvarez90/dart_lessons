@@ -12,9 +12,19 @@ void ls01HelloWorld() {
   print('Hello World in Dart!');
 }
 
-/// Uso de funciones.
+/// FUNCIONES
+///
+/// Son unidades de código reutilizables. Pueden o no
+/// regresar valores y pueden o no recibir argumentos.
 void ls02Functions() {
+  print('LS02. Create owners functions...');
+  // Obtiene string en reverse
+  String mensaje = 'Hello World';
+  print(reverseString(mensaje));
 
-  // función que muestra la suma dos enteros
-  
+  // Obtenemos sub string
+  String hello = "Hello World";
+  print(getSubString(hello, 5));
+  printSeparator();
 }
+
