@@ -57,3 +57,31 @@ String title(String str) {
 
   return str[0].toUpperCase() + str.substring(1);
 }
+
+/// Retorna un double indicando el tiempo de ejecución
+/// del callback times número de veces.
+double runnerTimeCounterExecution(Function callback, {int times = 1}) {
+  if (times < 0) {
+    throwNewException('Times integer cannot be <= 0');
+  }
+
+  final ti = DateTime.now().millisecondsSinceEpoch;
+
+  try {
+    for (int i = 1; i <= times; i++) {
+      callback();
+    }
+  } catch (ex) {
+    rethrow;
+  }
+
+  final tf = DateTime.now().millisecondsSinceEpoch;
+  final deltaT = tf - ti;
+  return deltaT / 1000.0;
+}
+
+/// Ejecuta una función aritmética de dos parámetros que
+/// se recibe como argumento.
+num operateNums(num x, num y, num Function(num, num) operator) {
+  return operator(x, y);
+}

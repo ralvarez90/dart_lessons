@@ -3,19 +3,28 @@ import 'package:dart_lessons/tools.dart';
 
 void main(List<String> arguments) {
   // Ls01. Show message with print function
-  ls01HelloWorld();
+  // ls01HelloWorld();
 
   // Ls02. Invocando funciones.
-  ls02Functions();
+  // ls02Functions();
 
   // Ls03. Parámetros posicionales
-  ls03Parametros();
+  // ls03Parametros();
 
   // Parámetros opcionales
-  ls04ParametrosOpcionales();
+  // ls04ParametrosOpcionales();
 
   // Named parameters
-  ls05NamedParameters();
+  // ls05NamedParameters();
+
+  // Arrow functions
+  // ls06ArrowFunctions();
+
+  // HOF
+  // ls07HOF();
+
+  // Función como argumento
+  ls08ParametrosHOF();
 
   // end application
   systemPause();

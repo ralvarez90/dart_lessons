@@ -122,5 +122,85 @@ void ls05NamedParameters() {
 }
 
 /// ARROW FUNCTIONS
-/// Se utilizan cuando las funciones se
-/// pueden reescribir en una sola línea o
+///
+/// Se utilizan cuando las funciones se pueden reescribir
+/// en una sola línea o expresión.
+void ls06ArrowFunctions() {
+  print('LS06. Arrow functions');
+
+  // arrow functions
+  num getDiff({required x, required y}) => x - y;
+  for (int i = 1; i <= 10; i++) {
+    print('$i - $i -> ${getDiff(x: i, y: i)}');
+  }
+
+  printSeparator();
+}
+
+/// HOF
+///
+/// Una hof es una función que cumple al menos una de las
+/// siguientes características:
+/// - Recibe otra (otra) función(es) como argumento
+/// - Retorna otra función.
+///
+/// Empleamos el tipo de dato Function para especificar
+/// el tipo de dato de una función.
+void ls07HOF() {
+  print('LS07. High Order Functions...');
+
+  // creamos función a ejecutar
+  void countTo([int number = 100000]) {
+    for (int i = 0; i <= number; i++) {}
+  }
+
+  // uso de hof
+  num deltaT = runnerTimeCounterExecution(countTo, times: 10000);
+  print('Tiempo de ejecución: ${deltaT.toStringAsPrecision(2)} seconds');
+
+  // uso de hof usando funciones anónimas
+  runnerTimeCounterExecution(() => {print('Hello World!')}, times: 10);
+  print('');
+
+  // uso de excepciones dentro
+
+  printSeparator();
+}
+
+/// MÁS SOBRE HOF
+///
+/// Una función es un objeto de tipo Function, donde en
+/// su firma se le puede especificar el tipo de dato
+/// que va a retornar, recibir, etc.
+void ls08ParametrosHOF() {
+  print('LS08. Parámetros en HOF...');
+
+  // get data
+  final x = num.tryParse(input('Número x: '));
+  final y = num.tryParse(input('Número y: '));
+
+  if (x == null || y == null) {
+    print('Error al leer datos.');
+    return;
+  }
+
+  // uso de función como parámetro.
+  print(operateNums(1, 2, (num x, num y) => x + y));
+  print(operateNums(4, 5, (num x, num y) => x - y));
+
+  printSeparator();
+}
+
+/// CLOSURES
+///
+/// Son funciones que accede al estado de su ámbito padre, incluso
+/// después de que el ámbito padre se haya ejecutado.
+void ls09Closures() {
+  // closure
+  final Function someClosure = (String name) {
+    print('Hello $name');
+  };
+
+  someClosure('Rodrigo');
+  someClosure();
+}
