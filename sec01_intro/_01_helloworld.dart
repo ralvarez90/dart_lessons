@@ -1,3 +1,5 @@
+import 'tools.dart';
+
 /**
  * USO DE PRINT
  * 
@@ -5,4 +7,5 @@
  */
 void main(List<String> args) {
   print('Hello World in Dart!');
+  systemPause();
 }
