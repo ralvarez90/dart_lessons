@@ -47,3 +47,26 @@ int getFirstIndexMultiple(List<int> numbers, int m) {
     return n % m == 0 && n != 0;
   });
 }
+
+void pprint(Map m) {
+  // todo: hacer un pprint en forma recursiva con mapas.
+}
+
+/**
+ * Get a title version of string str.
+ */
+String title(String str) {
+  if (str.isEmpty) {
+    return '';
+  }
+
+  final capitalizedWords = (str.trim().split(' ')).map((word) {
+    if (word.isEmpty) {
+      return '';
+    }
+
+    return word[0].toUpperCase() + word.substring(1).toLowerCase();
+  });
+
+  return capitalizedWords.join(' ');
+}
