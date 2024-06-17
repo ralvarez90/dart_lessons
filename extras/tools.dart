@@ -70,3 +70,22 @@ String title(String str) {
 
   return capitalizedWords.join(' ');
 }
+
+extension Str on String {
+  /// Get a title version on string str.
+  String title(String str) {
+    if (str.isEmpty) {
+      return '';
+    }
+
+    final capitalizedWords = (str.trim().split(' ')).map((word) {
+      if (word.isEmpty) {
+        return '';
+      }
+
+      return word[0].toUpperCase() + word.substring(1).toLowerCase();
+    });
+
+    return capitalizedWords.join(' ');
+  }
+}
