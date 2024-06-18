@@ -18,11 +18,15 @@ import '../extras/tools.dart';
  * pero no heredarse.
  * 
  * Una interface class también puede instanciarse.
+ * Si creamos una abstract interface class, creamos una verdadera
+ * interaface como en java.
  * 
  * final class
- * Pueden instanciarse e implementarse pero no pueden extenderse.
+ * Pueden instanciarse pero no pueden extenderse ni implementarse.
  * 
  * sealed class
+ * Permiten crear clases de subclase enumerable. Puede implementarse
+ * y heredarse pero no instanciarse.
  */
 void main() {
   // run examples
