@@ -1,3 +1,5 @@
+import '../extras/tools.dart';
+
 /**
  * MIXINS
  * 
@@ -28,9 +30,32 @@ mixin Maths {
 
   num division(num x, num y) {
     if (y == 0) {
-      throw Exception('Cannot be divide by zero.');
+      throw Exception('Cannot divide by zero.');
     }
 
     return x / y;
   }
+}
+
+/// Clase a extender con mixins
+class Computer with Maths {}
+
+class Mobile with Maths {}
+
+class Calculator with Maths {}
+
+/// Run application
+void main() {
+  // instances
+  final computer = Computer();
+  final mobile = Mobile();
+  final calculator = Calculator();
+
+  // invoke methods
+  print(computer.product(5, 10));
+  print(mobile.sum(5, 10));
+  print(calculator.product(5, 10));
+
+  // end message
+  systemPause();
 }
