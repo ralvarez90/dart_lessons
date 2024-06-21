@@ -89,3 +89,13 @@ extension Str on String {
     return capitalizedWords.join(' ');
   }
 }
+
+enum Color {
+  empty(''),
+  cyan('\u001B[36m'),
+  yellow('\u001B[33m'),
+  red('\u001B[31m');
+
+  final String code;
+  const Color(this.code);
+}
