@@ -11,10 +11,21 @@ import '../extras/tools.dart';
  * relanzamiento, en el contexto en el que se
  * invoque dicha función se deberá manejar la
  * posible excepción dentro de un try-catch.
- */
-
-// Run application
+ * 
+ * rethrow
+ * Se utiliza dentro de un bloque catch para volver
+ * a lanzar una excepción que ha sido capturada.
+ * 
+ * La diferencia entre throw y rethrow es que rethrow vuelve 
+ * a lanzar la excepción original preservando su pila de 
+ * llamadas original, mientras que throw crea una nueva excepción, 
+ * lo que puede hacer que la información de la pila de llamadas 
+ * se pierda.
+*/
 void main() {
+  // invocamos función
+  parsear();
+
   // end message
   systemPause();
 }
