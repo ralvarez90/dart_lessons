@@ -1,0 +1,13 @@
+'''Script de python
+Esto es un solo un archivo de prueba.
+'''
+
+
+def main():
+    '''Ejemplo de hola mundo.'''
+    print('Hello World!')
+
+
+if __name__ == '__main__':
+    main()
+    input('\nPress any key to continue. . . ')
