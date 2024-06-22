@@ -107,6 +107,34 @@ extension TimerExtension on int {
   }
 }
 
+extension FileSize on File {
+  static const int ratio = 1024;
+
+  Future<num> kb() async {
+    return (await length()) / ratio;
+  }
+
+  num kbSync() {
+    return lengthSync() / ratio;
+  }
+
+  Future<num> mb() async {
+    return (await kb()) / ratio;
+  }
+
+  num mbSync() {
+    return kbSync() / ratio;
+  }
+
+  Future<num> gb() async {
+    return (await mb()) / ratio;
+  }
+
+  num gbSync() {
+    return mbSync() / ratio;
+  }
+}
+
 enum Color {
   empty(''),
   cyan('\u001B[36m'),

@@ -216,3 +216,4 @@ fabric.properties
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/git,visualstudiocode,dart,flutter,jetbrains+all
+*.DS_Store
