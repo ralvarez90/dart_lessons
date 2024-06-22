@@ -90,6 +90,23 @@ extension Str on String {
   }
 }
 
+extension TimerExtension on int {
+  String toTimer() {
+    int hours = this ~/ 3600;
+    String hoursString = hours < 10 ? '0$hours' : '$hours';
+
+    int remainingSeconds = this % 3600;
+    int minutes = remainingSeconds ~/ 60;
+
+    String minutesString = minutes < 10 ? '0$minutes' : '$minutes';
+    remainingSeconds = remainingSeconds % 60;
+    String secondsString =
+        remainingSeconds < 10 ? '0$remainingSeconds' : '$remainingSeconds';
+
+    return '$hoursString:$minutesString:$secondsString';
+  }
+}
+
 enum Color {
   empty(''),
   cyan('\u001B[36m'),
