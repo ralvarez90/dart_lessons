@@ -1,5 +1,7 @@
 import 'dart:io';
 
+import '../extras/tools.dart';
+
 /**
  * EJERCICIO
  * 
@@ -30,7 +32,8 @@ void main() async {
     await filteredFile.writeAsString('$name\n', mode: FileMode.append);
   }
 
-  // escribirmos
+  // end message
+  systemPause();
 }
 
 class Country {
